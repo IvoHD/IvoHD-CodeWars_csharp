@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeWars_csharp", "CodeWars_csharp\CodeWars_csharp.csproj", "{E9072C0D-44F9-4EE6-A1D2-76429A9F29AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9072C0D-44F9-4EE6-A1D2-76429A9F29AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9072C0D-44F9-4EE6-A1D2-76429A9F29AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9072C0D-44F9-4EE6-A1D2-76429A9F29AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9072C0D-44F9-4EE6-A1D2-76429A9F29AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E829F94-4055-4A25-ABA7-8807BC781465}
+	EndGlobalSection
+EndGlobal
