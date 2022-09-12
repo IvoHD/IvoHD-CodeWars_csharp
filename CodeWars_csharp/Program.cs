@@ -33,13 +33,32 @@ public class Kata
         return score;
     }
     //
+    // Split String https://www.codewars.com/kata/515de9ae9dcfc28eb6000001
+    public static string[] SplitString(string str)
+    {
+        List<string> res = new List<string>();
+
+        if (str.Length % 2 != 0)
+            str += '_';
+
+        for (int i = 0; i < str.Length; i += 2)
+		{
+            res.Add(new string(new char[]{
+                str[i], 
+                str[i + 1]
+            }));
+		}
+
+        return res.ToArray();
+    }
+    //
 }
 
 public class Programm
 {
     static void Main()
     {
-        Console.WriteLine(Kata.High("aaa b"));
+
     }
 
 
