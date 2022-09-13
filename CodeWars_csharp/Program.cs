@@ -63,10 +63,26 @@ public class Kata
         return res.ToArray();
 	}
 	//
-	// Human Readable Time https://www.codewars.com/kata/52685f7382004e774f0001f7
+	//Human Readable Time https://www.codewars.com/kata/52685f7382004e774f0001f7
 	public static string GetReadableTime(int seconds)
 	{
 		return string.Format("{0:00}:{1:00}:{2:00}", seconds / 3600, (seconds / 60) % 60, seconds % 60);
+	}
+	//
+	//Sum of Digits / Digital Root https://www.codewars.com/kata/541c8630095125aba6000c00
+	public static int DigitalRoot(long n)
+	{
+        string str = n.ToString();
+        int subtotal;
+        do
+        {
+            subtotal = 0;
+            foreach (char c in str)
+                subtotal += c - 48;
+            str = subtotal.ToString();
+        } while (subtotal > 10);
+
+        return subtotal;
 	}
 }
 
@@ -74,8 +90,7 @@ public class Programm
 {
     static void Main()
     {
-		Kata.GetReadableTime(0);
-		Kata.GetReadableTime(5);
-		Kata.GetReadableTime(86399);
+        Kata.DigitalRoot(16);
+		Kata.DigitalRoot(567);
 	}
 }
