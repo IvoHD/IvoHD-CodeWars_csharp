@@ -84,13 +84,25 @@ public class Kata
 
         return subtotal;
 	}
+	//
+	//Build Tower https://www.codewars.com/kata/576757b1df89ecf5bd00073b
+	public static string[] TowerBuilder(int nFloors)
+    {
+        List<string> res = new List<string>();
+        for (int i = 0; i < nFloors; i++)
+        {
+            string padding = new string(' ', nFloors - i - 1);
+            res.Add(padding + new string('*', 1 + i * 2) + padding);
+		}
+		return res.ToArray();
+	}
+    //
 }
 
 public class Programm
 {
     static void Main()
     {
-        Kata.DigitalRoot(16);
-		Kata.DigitalRoot(567);
+
 	}
 }
