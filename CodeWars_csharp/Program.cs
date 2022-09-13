@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 public class Kata
 {
@@ -96,6 +98,27 @@ public class Kata
 		}
 		return res.ToArray();
 	}
+	//
+	//Where my anagrams at? https://www.codewars.com/kata/523a86aa4230ebb5420001e1
+	public static List<string> Anagrams(string anagram, List<string> words)
+	{
+        anagram = SortString(anagram);
+
+		List<string> res = new List<string>();
+
+        foreach (string word in words)
+            if (SortString(word) == anagram)
+                res.Add(word);
+
+        return res;
+    }
+
+    public static string SortString(string str)
+    {
+		char[] characters = str.ToArray();
+		Array.Sort(characters);
+        return new string(characters);
+	}
     //
 }
 
@@ -103,6 +126,6 @@ public class Programm
 {
     static void Main()
     {
-
-	}
+      
+    }
 }
