@@ -62,13 +62,20 @@ public class Kata
                     res.Remove(num);
         return res.ToArray();
 	}
-    //
+	//
+	// Human Readable Time https://www.codewars.com/kata/52685f7382004e774f0001f7
+	public static string GetReadableTime(int seconds)
+	{
+		return string.Format("{0:00}:{1:00}:{2:00}", seconds / 3600, (seconds / 60) % 60, seconds % 60);
+	}
 }
 
 public class Programm
 {
     static void Main()
     {
-
-    }
+		Kata.GetReadableTime(0);
+		Kata.GetReadableTime(5);
+		Kata.GetReadableTime(86399);
+	}
 }
