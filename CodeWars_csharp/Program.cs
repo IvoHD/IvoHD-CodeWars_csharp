@@ -33,7 +33,7 @@ public class Kata
         return score;
     }
     //
-    // Split String https://www.codewars.com/kata/515de9ae9dcfc28eb6000001
+    //Split String https://www.codewars.com/kata/515de9ae9dcfc28eb6000001
     public static string[] SplitString(string str)
     {
         List<string> res = new List<string>();
@@ -51,6 +51,17 @@ public class Kata
 
         return res.ToArray();
     }
+	//
+	//Array.diff https://www.codewars.com/kata/523f5d21c841566fde000009
+	public static int[] ArrayDiff(int[] a, int[] b)
+	{
+        List<int> res = a.ToList();
+        foreach (int num in b)
+            if (res.Contains(num))
+                while(!res.Contains(num))
+                    res.Remove(num);
+        return res.ToArray();
+	}
     //
 }
 
@@ -60,6 +71,4 @@ public class Programm
     {
 
     }
-
-
 }
