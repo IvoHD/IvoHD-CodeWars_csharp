@@ -119,13 +119,31 @@ public class Kata
 		Array.Sort(characters);
         return new string(characters);
 	}
-    //
+	//
+	//Is a number prime? https://www.codewars.com/kata/5262119038c0985a5b00029f
+	public static bool IsPrime(int n)
+	{
+		if (n == 2 || n == 3)
+			return true;
+		if (n % 2 == 0 || n <= 1 || n % 3 == 0)
+			return false;
+
+        for (int i = 3; i <= Math.Sqrt(n); i += 2)
+            if (n % i == 0)
+                return false;
+
+		return true;
+	}
 }
 
 public class Programm
 {
     static void Main()
     {
-      
-    }
+        //Console.WriteLine(Kata.IsPrime(7));
+		//Console.WriteLine(Kata.IsPrime(3));
+		Console.WriteLine(Kata.IsPrime(143));
+		//Kata.IsPrime(8);
+		//Kata.IsPrime(5099);
+	}
 }
