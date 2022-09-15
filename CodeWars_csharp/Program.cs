@@ -134,16 +134,29 @@ public class Kata
 
 		return true;
 	}
+    //
+    //Josephus Permutation https://www.codewars.com/kata/5550d638a99ddb113e0000a2
+    public static List<object> JosephusPermutation(List<object> items, int k)
+    {
+        List<object> res = new List<object>();
+
+        for (int i = k; items.Count != 0; i += k)
+        {
+            while (i > items.Count)
+                i -= items.Count;
+            res.Add(items[i - 1]);
+            items.RemoveAt(i - 1);
+            i--;
+        }
+        return res;
+    }
+    //
 }
 
 public class Programm
 {
     static void Main()
     {
-        //Console.WriteLine(Kata.IsPrime(7));
-		//Console.WriteLine(Kata.IsPrime(3));
-		Console.WriteLine(Kata.IsPrime(143));
-		//Kata.IsPrime(8);
-		//Kata.IsPrime(5099);
+
 	}
 }
